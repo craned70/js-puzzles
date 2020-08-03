@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/running-sum-of-1d-array/
-
 const runningSum = function(nums) {
     sum = 0;
     return nums.map((x) => sum += x);
@@ -17,4 +16,17 @@ const kidsWithCandies = function(candies, extraCandies) {
         }
     }
     return result;
+};
+
+// https://leetcode.com/problems/number-of-good-pairs/
+var numIdenticalPairs = function(nums) {
+    let good = 0;
+    for (i=0;i<nums.length;i++) {
+        for (j=0;j<nums.length;j++) {
+            if (nums[i] == nums[j] && i < j) {
+                good++;
+            }
+        }
+    }
+    return good;
 };
